@@ -1,0 +1,102 @@
+@layer components {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 100dvh;
+    padding: var(--lt-space-4);
+    background-color: var(--lt-background);
+    border-right: 1px solid var(--lt-border);
+    overflow-y: auto;
+    z-index: var(--lt-z-dropdown);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lt-space-1);
+  }
+
+  .sidebar a {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--lt-space-2);
+    padding: var(--lt-space-2) var(--lt-space-3);
+    font-size: var(--lt-text-sm);
+    color: var(--lt-foreground);
+    text-decoration: none;
+    border-radius: var(--lt-radius-sm);
+    transition: background-color var(--lt-transition-fast);
+
+    &:hover, &[aria-current] {
+      background-color: var(--lt-accent);
+    }
+  }
+
+  .sidebar details {
+    border: none;
+    overflow: visible;
+
+    & + details {
+      margin-top: 0;
+    }
+  }
+
+  .sidebar summary {
+    justify-content: flex-start;
+    gap: var(--lt-space-2);
+    padding: var(--lt-space-2) var(--lt-space-3);
+    font-size: var(--lt-text-sm);
+    font-weight: var(--lt-font-medium);
+    color: var(--lt-foreground);
+    border-radius: var(--lt-radius-sm);
+
+    &::after {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin-left: auto;
+    }
+  }
+
+  .sidebar details[open] summary {
+    border-bottom: none;
+  }
+
+  .sidebar details > *:not(summary) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lt-space-1);
+    padding: var(--lt-space-1) 0;
+  }
+
+  .sidebar details a {
+    padding-left: calc(var(--lt-space-3) + 1rem + var(--lt-space-2));
+
+    &:hover {
+      color: var(--lt-foreground);
+    }
+  }
+
+  .sidebar-content {
+    margin-left: 16rem;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform var(--lt-transition);
+      box-shadow: var(--lt-shadow-lg);
+    }
+
+    .sidebar[data-open] {
+      transform: translateX(0);
+    }
+
+    .sidebar-content {
+      margin-left: 0;
+    }
+  }
+}
