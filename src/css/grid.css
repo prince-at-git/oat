@@ -13,7 +13,9 @@
     gap: var(--lt-space-4);
   }
 
-  .col, [class*="col-"] { grid-column: span var(--col-span, 12); }
+  .col, [class*="col-"] {
+    grid-column: span var(--col-span, 12);
+  }
 
   .col-1 { --col-span: 1; }
   .col-2 { --col-span: 2; }
@@ -29,7 +31,10 @@
   .col-12 { --col-span: 12; }
 
   @container (max-width: 640px) {
-    .row { grid-template-columns: repeat(4, 1fr); }
+    .row {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
     .col-sm-1 { --col-span: 1; }
     .col-sm-2 { --col-span: 2; }
     .col-sm-3 { --col-span: 3; }

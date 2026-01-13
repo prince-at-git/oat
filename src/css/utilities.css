@@ -11,7 +11,9 @@
     border-width: 0;
   }
 
-  .hidden { display: none !important; }
+  .hidden {
+    display: none !important;
+  }
 
   .text-left { text-align: left; }
   .text-center { text-align: center; }
@@ -22,6 +24,7 @@
   .items-center { align-items: center; }
   .justify-center { justify-content: center; }
   .justify-between { justify-content: space-between; }
+
   .gap-1 { gap: var(--lt-space-1); }
   .gap-2 { gap: var(--lt-space-2); }
   .gap-4 { gap: var(--lt-space-4); }

@@ -12,19 +12,28 @@
     &[data-variant="error"], &[data-variant="destructive"] {
       border-color: rgb(from var(--lt-destructive) r g b / 0.5);
       color: var(--lt-destructive);
-      & a { color: var(--lt-destructive); }
+
+      & a {
+        color: var(--lt-destructive);
+      }
     }
 
     &[data-variant="success"] {
       border-color: rgb(from var(--lt-success) r g b / 0.5);
       color: var(--lt-success);
-      & a { color: var(--lt-success); }
+
+      & a {
+        color: var(--lt-success);
+      }
     }
 
     &[data-variant="warning"] {
       border-color: rgb(from var(--lt-warning) r g b / 0.5);
       color: var(--lt-warning);
-      & a { color: var(--lt-warning); }
+
+      & a {
+        color: var(--lt-warning);
+      }
     }
   }
 }

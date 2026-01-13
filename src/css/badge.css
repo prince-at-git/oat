@@ -11,10 +11,30 @@
     color: var(--lt-primary-foreground);
     border-radius: var(--lt-radius-full);
 
-    &.secondary { background-color: var(--lt-secondary); color: var(--lt-secondary-foreground); }
-    &.outline { background-color: transparent; color: var(--lt-foreground); border: 1px solid var(--lt-border); }
-    &.destructive { background-color: var(--lt-destructive); color: var(--lt-destructive-foreground); }
-    &.success { background-color: var(--lt-success); color: var(--lt-success-foreground); }
-    &.warning { background-color: var(--lt-warning); color: var(--lt-warning-foreground); }
+    &.secondary {
+      background-color: var(--lt-secondary);
+      color: var(--lt-secondary-foreground);
+    }
+
+    &.outline {
+      background-color: transparent;
+      color: var(--lt-foreground);
+      border: 1px solid var(--lt-border);
+    }
+
+    &.destructive {
+      background-color: var(--lt-destructive);
+      color: var(--lt-destructive-foreground);
+    }
+
+    &.success {
+      background-color: var(--lt-success);
+      color: var(--lt-success-foreground);
+    }
+
+    &.warning {
+      background-color: var(--lt-warning);
+      color: var(--lt-warning-foreground);
+    }
   }
 }

@@ -34,9 +34,22 @@
     border-top-color: var(--lt-primary);
     border-radius: var(--lt-radius-full);
     animation: lt-spin 0.6s linear infinite;
-    &.sm { width: 1rem; height: 1rem; }
-    &.lg { width: 2rem; height: 2rem; border-width: 3px; }
+
+    &.sm {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &.lg {
+      width: 2rem;
+      height: 2rem;
+      border-width: 3px;
+    }
   }
 
-  @keyframes lt-spin { to { transform: rotate(360deg); } }
+  @keyframes lt-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }

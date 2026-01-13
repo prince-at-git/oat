@@ -23,14 +23,31 @@
     cursor: pointer;
     transition: background-color var(--lt-transition-fast), color var(--lt-transition-fast);
 
-    &:hover { color: var(--lt-foreground); }
-    &[aria-selected="true"] { background-color: var(--lt-background); color: var(--lt-foreground); box-shadow: var(--lt-shadow-sm); }
-    &:focus-visible { outline: 2px solid var(--lt-ring); outline-offset: 2px; }
+    &:hover {
+      color: var(--lt-foreground);
+    }
+
+    &[aria-selected="true"] {
+      background-color: var(--lt-background);
+      color: var(--lt-foreground);
+      box-shadow: var(--lt-shadow-sm);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--lt-ring);
+      outline-offset: 2px;
+    }
   }
 
   [role="tabpanel"] {
     padding: var(--lt-space-4) 0;
-    &:focus-visible { outline: none; }
-    &[hidden] { display: none; }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &[hidden] {
+      display: none;
+    }
   }
 }
