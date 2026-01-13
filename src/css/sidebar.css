@@ -24,7 +24,7 @@
     display: flex;
     justify-content: flex-start;
     gap: var(--lt-space-2);
-    padding: var(--lt-space-2) var(--lt-space-3);
+    padding: var(--lt-space-1) var(--lt-space-3);
     font-size: var(--lt-text-sm);
     color: var(--lt-foreground);
     text-decoration: none;

@@ -20,6 +20,7 @@ CSS_FILES = src/css/00-layers.css \
             src/css/dialog.css \
             src/css/dropdown.css \
             src/css/toast.css \
+            src/css/sidebar.css \
             src/css/utilities.css
 
 dist: css js
