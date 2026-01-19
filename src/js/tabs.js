@@ -19,15 +19,19 @@ class LMTabs extends LMBase {
   #activeIndex = 0;
 
   init() {
-    this.#tabs = this.$$('[role="tab"]');
-    this.#panels = this.$$('[role="tabpanel"]');
+    // Find direct child tablist and get tabs from it.
+    const tablist = Array.from(this.children).find(el => el.getAttribute('role') === 'tablist');
+    this.#tabs = tablist ? Array.from(tablist.querySelectorAll('[role="tab"]')) : [];
+
+    // Find direct child panels.
+    this.#panels = Array.from(this.children).filter(el => el.getAttribute('role') === 'tabpanel');
 
     if (this.#tabs.length === 0 || this.#panels.length === 0) {
       console.warn('lm-tabs: Missing tab or tabpanel elements');
       return;
     }
 
-    // Generate IDs and set up ARIA
+    // Generate IDs and set up ARIA.
     this.#tabs.forEach((tab, i) => {
       const panel = this.#panels[i];
       if (!panel) return;
@@ -44,7 +48,7 @@ class LMTabs extends LMBase {
       tab.addEventListener('keydown', this);
     });
 
-    // Find initially active tab
+    // Find initially active tab.
     const activeTab = this.#tabs.findIndex(t =>
       t.getAttribute('aria-selected') === 'true'
     );

@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     // Move the original Zola syntax-highlighted <pre> into the Code tab.
-    demo.querySelector('[role="tabpanel"]:last-child').appendChild(pre);
+    demo.querySelector(':scope > lm-tabs > [role="tabpanel"]:last-child').appendChild(pre);
   });
 });
