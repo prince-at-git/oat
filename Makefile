@@ -23,6 +23,7 @@ CSS_FILES = src/css/00-layers.css \
             src/css/dropdown.css \
             src/css/toast.css \
             src/css/sidebar.css \
+            src/css/skeleton.css \
             src/css/tooltip.css \
             src/css/utilities.css
 

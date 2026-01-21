@@ -1,0 +1,43 @@
+@layer components {
+  [role="status"].skeleton {
+    margin-bottom: var(--lm-space-3);
+    background: var(--lm-muted);
+    border-radius: var(--lm-radius);
+    animation: lm-shimmer 2s infinite;
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      90deg,
+      var(--lm-muted) 0%,
+      color-mix(in srgb, var(--lm-muted) 30%, white) 30%,
+      var(--lm-muted) 100%
+    );
+
+    [data-theme="dark"] & {
+      background-image: linear-gradient(
+        90deg,
+        var(--lm-muted) 0%,
+        color-mix(in srgb, var(--lm-muted) 90%, var(--lm-foreground)) 90%,
+        var(--lm-muted) 100%
+      );
+    }
+
+    &.box {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &.line {
+      height: 1rem;
+      width: 100%;
+    }
+  }
+
+  [role="status"].skeleton:last-child {
+    margin-bottom: 0;
+  }
+
+  @keyframes lm-shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+}
