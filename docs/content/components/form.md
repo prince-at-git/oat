@@ -40,6 +40,16 @@ Form elements are styled automatically. Wrap inputs in `<label>` for proper asso
   </label>
 
   <label>
+    Date and time
+    <input type="datetime-local" />
+  </label>
+
+  <label>
+    Date
+    <input type="date" />
+  </label>
+
+  <label>
     <input type="checkbox"> I agree to the terms
   </label>
 
@@ -59,6 +69,7 @@ Form elements are styled automatically. Wrap inputs in `<label>` for proper asso
 </form>
 ```
 {% end %}
+
 
 ### Input group
 
