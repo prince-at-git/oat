@@ -4,7 +4,7 @@ weight = 60
 description = "Card containers using the semantic <article> tag."
 +++
 
-Use `class="card"` for cards. Optionally include `<header>` and `<footer>`.
+Use `class="card"` for a visual box-like card look.
 
 {% demo() %}
 ```html
@@ -14,7 +14,7 @@ Use `class="card"` for cards. Optionally include `<header>` and `<footer>`.
     <p>Card description goes here.</p>
   </header>
   <p>This is the card content. It can contain any HTML.</p>
-  <footer>
+  <footer class="flex gap-2 mt-4">
     <button class="outline">Cancel</button>
     <button>Save</button>
   </footer>
