@@ -14,7 +14,7 @@ Use `class="card"` for a visual box-like card look.
     <p>Card description goes here.</p>
   </header>
   <p>This is the card content. It can contain any HTML.</p>
-  <footer class="flex gap-2 mt-4">
+  <footer class="hstack">
     <button class="outline">Cancel</button>
     <button>Save</button>
   </footer>
