@@ -94,7 +94,8 @@ Use `.group` on a `<fieldset>` to combine inputs with buttons or labels.
 <fieldset class="group">
   <legend>https://</legend>
   <input type="url" placeholder="subdomain">
-  <select placeholder="Select" aria-label="Select a subdomain">
+  <select aria-label="Select a subdomain">
+    <option value="" disabled selected>Select</option>
     <option>.example.com</option>
     <option>.example.net</option>
   </select>
